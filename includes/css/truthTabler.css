@@ -1,0 +1,40 @@
+body
+{
+	background:	#184C29;
+}
+
+p
+{
+	color:	#FFBDE9;
+	margin:	2px;
+}
+
+h2
+{
+	margin-bottom: 2px;
+}
+
+#navigationBar
+{
+	border-width:	2px;
+	border-style:	dashed;
+	border-radius:	20px;
+
+	position:	fixed;
+	left:	25px;
+	top:	25px;
+
+	background-color:	rgba(255,255,255,0.25);
+}
+
+#navigationBar p
+{
+	color:	#7A225E;
+}
+
+#mainBody
+{
+	position:	relative;
+	left:	150px;
+	top:	25px;
+}

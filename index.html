@@ -3,9 +3,32 @@
 		<title>truthTabler</title>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 		<script type="text/javascript" src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+		<script type="text/javascript" src="includes/js/tableElements.js"></script>
 		<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
 		<link rel="stylesheet" type="text/css" href="includes/css/truthTabler.css">
 	</head>
 	<body>
+		<div id="navigationBar">
+			<p>Navigation</p>
+			<p>New Truth Table</p>
+			<p>View Existing</p>
+		</div>
+		<div id="mainBody">
+			<h1>truthTabler</h1>
+			<div id="symbolDiv">
+				<h2>Insert a textual representation of the symbol</h2>
+				<form id="symbolForm">
+					<div class="symbol" data-symbol="A">A: <input type="text" class="symbolRep" name="A"></div>
+					<div class="symbol" data-symbol="B">B: <input type="text" class="symbolRep" name="B"><a id="addSymbol" href="#" onclick="addSymbol(67);">+</a></div>
+				</form>
+			</div>
+			<div id="propositionDiv">
+				<h2>Create your propositions</h2>
+				<p id="availableSymbols">Available Symbols:<input type="button" class="symbolButton" value="A"><input type="button" class="symbolButton" value="B"></p>
+				<form id="propositionForm">
+					<div class="propLine" data-proposition="1">Proposition 1: <input type="text" class="proposition" name="1"><a id="addProposition" href="#" onclick="addProposition(2);">+</a></div>
+				</form>
+			</div>
+		</div>
 	</body>
 </html>
