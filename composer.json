@@ -1,0 +1,6 @@
+{
+	"require":
+	{
+		"jgillmanjr/php-proplogic": "dev-master"
+	}
+}
