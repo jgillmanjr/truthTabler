@@ -1,0 +1,53 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "ea3d5cae7066ce90d010538a6106a60d",
+    "packages": [
+        {
+            "name": "jgillmanjr/php-proplogic",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jgillmanjr/php-propLogic.git",
+                "reference": "d1d1749d19a9c227a55f9f81f39a8bd41aa2e262"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jgillmanjr/php-propLogic/zipball/d1d1749d19a9c227a55f9f81f39a8bd41aa2e262",
+                "reference": "d1d1749d19a9c227a55f9f81f39a8bd41aa2e262",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "propLogic.class.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "A simple propositional logic parser",
+            "homepage": "https://github.com/jgillmanjr/php-propLogic",
+            "time": "2013-12-30 11:44:59"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "jgillmanjr/php-proplogic": 20
+    },
+    "platform": [
+
+    ],
+    "platform-dev": [
+
+    ]
+}
