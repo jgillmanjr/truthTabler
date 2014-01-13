@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jgillmanjr/php-propLogic.git",
-                "reference": "d1d1749d19a9c227a55f9f81f39a8bd41aa2e262"
+                "reference": "4b223eb190b1eff2392911994189e0401ae679dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jgillmanjr/php-propLogic/zipball/d1d1749d19a9c227a55f9f81f39a8bd41aa2e262",
-                "reference": "d1d1749d19a9c227a55f9f81f39a8bd41aa2e262",
+                "url": "https://api.github.com/repos/jgillmanjr/php-propLogic/zipball/4b223eb190b1eff2392911994189e0401ae679dd",
+                "reference": "4b223eb190b1eff2392911994189e0401ae679dd",
                 "shasum": ""
             },
             "type": "library",
@@ -31,7 +31,7 @@
             ],
             "description": "A simple propositional logic parser",
             "homepage": "https://github.com/jgillmanjr/php-propLogic",
-            "time": "2013-12-30 11:44:59"
+            "time": "2014-01-10 21:01:46"
         }
     ],
     "packages-dev": [

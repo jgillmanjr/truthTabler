@@ -58,14 +58,14 @@ function analyze()
 			success:
 				function(data, textStatus, jqXHR)
 				{
-					analysis = data;
-					generateTable(analysis);
+					logicData = data;
+					generateTable(logicData);
 				}
 		}
 	);
 }
 
-function generateTable(logicData)
+function generateTable(analysis)
 {
 	tableColumns = new Array();
 	tableData = new Array();
@@ -129,7 +129,9 @@ function generateTable(logicData)
 		tableData.push(tableRow);
 	}
 
-	$('#resultTable').dataTable(
+	if(typeof table !== 'undefined')
+	{
+		table = $('#resultTable').dataTable(
 		{
 			bDestroy:	true, // This will clean out the table first
 			bFilter:	false,
@@ -137,6 +139,8 @@ function generateTable(logicData)
 			aaSorting:	[],
 			aoColumns:	tableColumns,
 			aaData:		tableData
-		}
-	);
+		}	
+	}
+
+
 }

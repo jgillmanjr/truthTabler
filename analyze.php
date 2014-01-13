@@ -8,5 +8,5 @@
 
 	$parser = new propLogic($symbols, $propositions);
 
-	echo json_encode($parser->generateTable());
+	echo json_encode($parser->parseArgument());
 ?>
