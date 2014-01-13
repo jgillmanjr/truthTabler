@@ -67,80 +67,63 @@ function analyze()
 
 function generateTable(analysis)
 {
-	tableColumns = new Array();
-	tableData = new Array();
+	//tableColumns = new Array();
+	//tableData = new Array();
 
 	// Set columns
+	//tableColumns.push('Truthset');
+	$('#resultTable').empty(); // Cleanout the table if it already exists
+	tableHtml = '<tr>' + "\n" + '<th>Truthset</th>' + "\n";
 	var i;
-	tableColumns.push(
-		{
-			sTitle:	'Truthset',
-			sClass:	'center'
-		}
-	);
 	for(i = 0; i <= (availableSymbols.length - 1); ++i)
 	{
-		tableColumns.push(
-			{
-				sTitle : availableSymbols[i],
-				sClass : 'center'
-			}
-		);
+		//tableColumns.push(availableSymbols[i]);
+		tableHtml += '<th>' + availableSymbols[i] + '</th>' + "\n";
 	}
 	for(i = 0; i <= (analysis.byProp.length - 1); ++i)
 	{
-		tableColumns.push(
-			{
-				sTitle : analysis.byProp[i].proposition,
-				sClass : 'center'
-			}
-		);
+		//tableColumns.push(analysis.byProp[i].proposition);
+		tableHtml += '<th>' + analysis.byProp[i].proposition + '</th>' + "\n";
 	}
+	tableHtml += '</tr>' + "\n";
 
 	// Set data
 	for(i = (Object.keys(analysis.byInt).length - 1); i >= 0; --i) // Counting down, since we want to start with all true
 	{
-		tableRow = new Array();
-		tableRow.push(i); // The truthset (the integer version of the boolean bits)
+		//tableRow = new Array();
+		tableHtml += '<tr>' + "\n" + '<td>' + i + '</td>' + "\n";
+		//tableRow.push(i); // The truthset (the integer version of the boolean bits)
 		var j;
 		for(j = 0; j <= (availableSymbols.length - 1); ++j) // Push in the symbols
 		{
 			if(analysis.byInt[i].truthValues[availableSymbols[j]])
 			{
-				tableRow.push('T');
+				//tableRow.push('T');
+				tableHtml += '<td>T</td>' + "\n";
 			}
 			else
 			{
-				tableRow.push('F');
+				//tableRow.push('F');
+				tableHtml += '<td>F</td>' + "\n";
 			}
 		}
 		for(j = 0; j <= (availableProps.length - 1); ++j) // Push in the proposition evaluations
 		{
 			if(analysis.byInt[i].propositions[j].propositionValue)
 			{
-				tableRow.push('T');
+				//tableRow.push('T');
+				tableHtml += '<td>T</td>' + "\n";
 			}
 			else
 			{
-				tableRow.push('F');
+				//tableRow.push('F');
+				tableHtml += '<td>F</td>' + "\n";
 			}
 		}
-
-		tableData.push(tableRow);
+		//tableData.push(tableRow);
+		tableHtml += '</tr>' + "\n";
 	}
 
-	if(typeof table !== 'undefined')
-	{
-		table = $('#resultTable').dataTable(
-		{
-			bDestroy:	true, // This will clean out the table first
-			bFilter:	false,
-			bPaginate:	false,
-			aaSorting:	[],
-			aoColumns:	tableColumns,
-			aaData:		tableData
-		}	
-	}
-
-
+	$('#resultTable').html(tableHtml);
+	delete tableHtml; // cleanup
 }
