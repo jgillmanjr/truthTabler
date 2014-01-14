@@ -19,18 +19,11 @@
 				<h2>Insert a textual representation of the symbol (optional)</h2>
 				<form id="symbolForm">
 					<div class="symbol" data-symbol="A">A: <input type="text" class="symbolRep" name="A" onchange="updateButton('A');"></div>
-					<div class="symbol" data-symbol="B">B: <input type="text" class="symbolRep" name="B" onchange="updateButton('B');"><a id="addSymbol" href="#" onclick="addSymbol(67);">+</a></div>
+					<div class="symbol" data-symbol="B">B: <input type="text" class="symbolRep" name="B" onchange="updateButton('B');"><input type="button" id="symbolAdder" value="+" onclick="addSymbol(67);"></div>
 				</form>
 			</div>
 			<div id="propositionDiv">
 				<h2>Create your propositions</h2>
-				<p id="availableSymbols">Available Symbols:
-					<input type="button" id="symbolButtonA" class="symbolButton" value="A">
-					<input type="button" id="symbolButtonB" class="symbolButton" value="B">
-				</p>
-				<script type="text/javascript">
-					$('.symbolButton').tooltip()
-				</script>
 				<div id="availableOperators">
 					<p>Available Operators (hover for description):
 						<input type="button" class="operatorButton" title="Material Implication (if .. then)"value=">">
@@ -44,7 +37,7 @@
 							$('.symbolButton').tooltip();
 						</script>
 				<form id="propositionForm">
-					<div class="propLine" data-proposition="1">Proposition 1: <input type="text" class="proposition" name="1"><a id="addProposition" href="#" onclick="addProposition(2);">+</a></div>
+					<div class="propLine" data-proposition="1">Proposition 1: <input type="text" class="proposition" name="1"><input type="button" id="propAdder" value="+" onclick="addProposition(2);"></div>
 				</form>
 				<input type="button" value="Analyze" onclick="analyze();">
 			</div>
