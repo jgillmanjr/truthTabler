@@ -5,7 +5,6 @@ body
 
 p
 {
-	color:	#FFBDE9;
 	margin:	2px;
 }
 
@@ -39,9 +38,16 @@ h2
 	top:	25px;
 }
 
+table
+{
+	border:	1px solid black;
+}
+
 th, td
 {
 	min-width: 20px;
+	border-left: 	1px solid black;
+	border-right:	1px solid black;
 }
 
 td
